@@ -1,0 +1,1 @@
+import{bfs}from'./algorithms/bfs.js';import{dfs}from'./algorithms/dfs.js';import{ucs}from'./algorithms/ucs.js';import{astar}from'./algorithms/astar.js';export function run(c,a='ucs'){return({bfs,dfs,ucs,astar})[a](c);}export function compare(c){return Object.fromEntries(Object.entries({bfs,dfs,ucs,astar}).map(([k,f])=>[k,f(c)]));}

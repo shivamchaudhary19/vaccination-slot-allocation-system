@@ -1,0 +1,1 @@
+export function astar(c){const a=[...c].map(x=>({...x,g:x.distance_km,h:0,f:x.distance_km})).sort((x,y)=>x.f-y.f||x.id.localeCompare(y.id));return{selected:a[0]??null,trace:a.map(x=>({slotId:x.id,gCost:x.g,hCost:x.h,fCost:x.f}))};}

@@ -1,0 +1,1 @@
+export const offers=(c,v)=>c.vaccines.includes(v.toUpperCase()); export const available=s=>s.remaining>0; export const period=t=>{const h=Number(t.split(':')[0]);return h<12?'morning':h<17?'afternoon':'evening';}; export const suitable=(s,r)=>available(s)&&offers(s,r.vaccine)&&s.date===r.date&&period(s.time)===r.preferredTime&&s.distance_km<=r.maxDistance;
